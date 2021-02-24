@@ -1,0 +1,442 @@
+[
+  {
+    "id": "73899b8f.6cda04",
+    "type": "tab",
+    "label": "Debug",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "e124368c.5aa308",
+    "type": "rpi-gpio out",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "pin": "11",
+    "set": false,
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 594.0000076293945,
+    "y": 205.0000057220459,
+    "wires": []
+  },
+  {
+    "id": "8359c3ff.09cf3",
+    "type": "ui_slider",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "1st Finger",
+    "tooltip": "",
+    "group": "4e86dafc.ce6e84",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": "20",
+    "max": "7",
+    "step": "0.01",
+    "x": 290.5,
+    "y": 219,
+    "wires": [
+      [
+        "e124368c.5aa308"
+      ]
+    ]
+  },
+  {
+    "id": "29f023e5.8a58ac",
+    "type": "ui_slider",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "4th finger",
+    "tooltip": "",
+    "group": "8e5182fd.53dc5",
+    "order": 4,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": "20",
+    "max": "7",
+    "step": "0.01",
+    "x": 287.50000762939453,
+    "y": 410.66668128967285,
+    "wires": [
+      [
+        "b8c2a79d.044898"
+      ]
+    ]
+  },
+  {
+    "id": "ab8f355.ae7d9c8",
+    "type": "ui_slider",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "3rd Finger ",
+    "tooltip": "",
+    "group": "757e4e07.2075",
+    "order": 3,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": "20",
+    "max": "7",
+    "step": "0.01",
+    "x": 303.50000762939453,
+    "y": 328.6666784286499,
+    "wires": [
+      [
+        "7d888e9.0ca517"
+      ]
+    ]
+  },
+  {
+    "id": "3f079d7a.176102",
+    "type": "ui_slider",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "2nd Finger",
+    "tooltip": "",
+    "group": "34322ca0.2bf384",
+    "order": 2,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": "20",
+    "max": "5",
+    "step": "0.01",
+    "x": 293.50000762939453,
+    "y": 270.66668128967285,
+    "wires": [
+      [
+        "e7928d2f.f9023"
+      ]
+    ]
+  },
+  {
+    "id": "a2cc572f.437b48",
+    "type": "ui_slider",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "5th Finger",
+    "tooltip": "",
+    "group": "3f469a84.f5d386",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": "20",
+    "max": "7",
+    "step": "0.01",
+    "x": 285.50000762939453,
+    "y": 496.6666831970215,
+    "wires": [
+      [
+        "77ba7796.a93188"
+      ]
+    ]
+  },
+  {
+    "id": "b8c2a79d.044898",
+    "type": "rpi-gpio out",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "pin": "7",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 583.5000152587891,
+    "y": 407.66668033599854,
+    "wires": []
+  },
+  {
+    "id": "77ba7796.a93188",
+    "type": "rpi-gpio out",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "pin": "15",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 591.0000152587891,
+    "y": 497.0000171661377,
+    "wires": []
+  },
+  {
+    "id": "7d888e9.0ca517",
+    "type": "rpi-gpio out",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "pin": "12",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 591.0000152587891,
+    "y": 345.00001192092896,
+    "wires": []
+  },
+  {
+    "id": "e7928d2f.f9023",
+    "type": "rpi-gpio out",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "pin": "13",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 592.0000152587891,
+    "y": 263.00001525878906,
+    "wires": []
+  },
+  {
+    "id": "5b965cee.e5a764",
+    "type": "ui_slider",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "Hand",
+    "tooltip": "",
+    "group": "a2ac9b7f.f31778",
+    "order": 5,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "outs": "all",
+    "topic": "",
+    "min": "20",
+    "max": "7",
+    "step": "0.01",
+    "x": 295.50000762939453,
+    "y": 122.66667032241821,
+    "wires": [
+      [
+        "e124368c.5aa308",
+        "e7928d2f.f9023",
+        "7d888e9.0ca517",
+        "b8c2a79d.044898",
+        "77ba7796.a93188"
+      ]
+    ]
+  },
+  {
+    "id": "adfbc0f3.8745e",
+    "type": "ui_switch",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "switch",
+    "tooltip": "",
+    "group": "4421b3a1.80d94c",
+    "order": 7,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "decouple": "false",
+    "topic": "",
+    "style": "",
+    "onvalue": "20",
+    "onvalueType": "num",
+    "onicon": "",
+    "oncolor": "",
+    "offvalue": "7",
+    "offvalueType": "num",
+    "officon": "",
+    "offcolor": "",
+    "x": 270,
+    "y": 172,
+    "wires": [
+      [
+        "e124368c.5aa308"
+      ]
+    ]
+  },
+  {
+    "id": "c9a2a4cd.e1a088",
+    "type": "ui_button",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "group": "3e75ff78.b1f83",
+    "order": 8,
+    "width": 0,
+    "height": 0,
+    "passthru": false,
+    "label": "reset",
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "icon": "",
+    "payload": "20",
+    "payloadType": "num",
+    "topic": "",
+    "x": 269,
+    "y": 545,
+    "wires": [
+      [
+        "e124368c.5aa308",
+        "e7928d2f.f9023",
+        "7d888e9.0ca517",
+        "b8c2a79d.044898",
+        "77ba7796.a93188"
+      ]
+    ]
+  },
+  {
+    "id": "a4e32578.e86a68",
+    "type": "rpi-gpio out",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "pin": "16",
+    "set": false,
+    "level": "0",
+    "freq": "",
+    "out": "pwm",
+    "x": 552.7430953979492,
+    "y": 723.2014389038086,
+    "wires": []
+  },
+  {
+    "id": "95cdc260.598e2",
+    "type": "rpi-gpio out",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "pin": "24",
+    "set": false,
+    "level": "0",
+    "freq": "100",
+    "out": "out",
+    "x": 542.7361145019531,
+    "y": 791.2083511352539,
+    "wires": []
+  },
+  {
+    "id": "31921a07.c268e6",
+    "type": "ui_switch",
+    "z": "73899b8f.6cda04",
+    "name": "",
+    "label": "switch",
+    "tooltip": "",
+    "group": "a2ac9b7f.f31778",
+    "order": 1,
+    "width": 0,
+    "height": 0,
+    "passthru": true,
+    "decouple": "false",
+    "topic": "",
+    "style": "",
+    "onvalue": true,
+    "onvalueType": "str",
+    "onicon": "",
+    "oncolor": "",
+    "offvalue": false,
+    "offvalueType": "str",
+    "officon": "",
+    "offcolor": "",
+    "x": 276.1909942626953,
+    "y": 782.3541946411133,
+    "wires": [
+      [
+        "95cdc260.598e2"
+      ]
+    ]
+  },
+  {
+    "id": "4e86dafc.ce6e84",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "8e5182fd.53dc5",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "757e4e07.2075",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "34322ca0.2bf384",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "3f469a84.f5d386",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "a2ac9b7f.f31778",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "4421b3a1.80d94c",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "3e75ff78.b1f83",
+    "type": "ui_group",
+    "z": "",
+    "name": "Default",
+    "tab": "35bc0408.f9d28c",
+    "disp": true,
+    "width": "6",
+    "collapse": false
+  },
+  {
+    "id": "35bc0408.f9d28c",
+    "type": "ui_tab",
+    "z": "",
+    "name": "Home",
+    "icon": "dashboard",
+    "disabled": false,
+    "hidden": false
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "95b61c43.2f608",
+    "type": "tab",
+    "label": "API",
+    "disabled": true,
+    "info": ""
+  },
+  {
+    "id": "9f2f28c6.7a56f8",
+    "type": "http in",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "url": "move",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 106.5,
+    "y": 223.25001335144043,
+    "wires": [
+      [
+        "d7344d98.2ebd5"
+      ]
+    ]
+  },
+  {
+    "id": "a4c16013.4bbc4",
+    "type": "http response",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "statusCode": "200",
+    "headers": {},
+    "x": 486.0000228881836,
+    "y": 209.00003242492676,
+    "wires": []
+  },
+  {
+    "id": "d7344d98.2ebd5",
+    "type": "function",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "func": "/*\nThis script is part of the RoboCop project.\nIt serves as backend for the robotic hand.\nIncoming, http request, node-red messages\nget turned into power signals for the raspberry pi.\n\nThere are three steps involved\n1: Define minimum and maximum extension values\n    MAKE SURE TO CHANGE VALUES SLOWLY!\n    CAREFUL TO NOT OVERLOAD THE SERVOES!\n    const minMaxFFingerIndex = [ minValue, maxValue ];\n\n2: Convert query value to fingers value in min max range.\n*/\n\nconst minMaxF1 = [ 8, 17 ];\nconst minMaxF2 = [ 6, 17 ];\nconst minMaxF3 = [ 9, 20 ];\nconst minMaxF4 = [ 9, 20 ];\nconst minMaxF5 = [ 8.5, 20 ];\n\nvar oldMsg;\n\nif (msg != oldMsg) {\n    oldMsg = msg;\n\n    return [\n        msg,\n        { payload : minMaxF1[1] - (minMaxF1[1]-minMaxF1[0]) * Math.max(1, Math.min(msg.req.query.f1, + 100)) / 100  },\n        { payload : minMaxF2[1] - (minMaxF2[1]-minMaxF2[0]) * Math.max(1, Math.min(msg.req.query.f2, + 100)) / 100  },\n        { payload : minMaxF3[1] - (minMaxF3[1]-minMaxF3[0]) * Math.max(1, Math.min(msg.req.query.f3, + 100)) / 100  },\n        { payload : minMaxF4[1] - (minMaxF4[1]-minMaxF4[0]) * Math.max(1, Math.min(msg.req.query.f4, + 100)) / 100  },\n        { payload : minMaxF5[1] - (minMaxF5[1]-minMaxF5[0]) * Math.max(1, Math.min(msg.req.query.f5, + 100)) / 100  },\n    ];\n}\n",
+    "outputs": 6,
+    "noerr": 0,
+    "x": 258.5390625,
+    "y": 231.7109375,
+    "wires": [
+      [
+        "a4c16013.4bbc4"
+      ],
+      [
+        "4b1c53a0.cafbfc"
+      ],
+      [
+        "14f7caf9.296a25"
+      ],
+      [
+        "31aee22.004bf1e"
+      ],
+      [
+        "491cbabe.9a0e64"
+      ],
+      [
+        "e4ca635d.b35b4"
+      ]
+    ]
+  },
+  {
+    "id": "4b1c53a0.cafbfc",
+    "type": "rpi-gpio out",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "pin": "11",
+    "set": false,
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 493.7716979980469,
+    "y": 271.26300048828125,
+    "wires": []
+  },
+  {
+    "id": "14f7caf9.296a25",
+    "type": "rpi-gpio out",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "pin": "13",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 501.2716979980469,
+    "y": 348.76300048828125,
+    "wires": []
+  },
+  {
+    "id": "31aee22.004bf1e",
+    "type": "rpi-gpio out",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "pin": "12",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 500.2716979980469,
+    "y": 430.76299715042114,
+    "wires": []
+  },
+  {
+    "id": "491cbabe.9a0e64",
+    "type": "rpi-gpio out",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "pin": "7",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 492.7716979980469,
+    "y": 493.4296655654907,
+    "wires": []
+  },
+  {
+    "id": "e4ca635d.b35b4",
+    "type": "rpi-gpio out",
+    "z": "95b61c43.2f608",
+    "name": "",
+    "pin": "15",
+    "set": "",
+    "level": "0",
+    "freq": "100",
+    "out": "pwm",
+    "x": 500.2716979980469,
+    "y": 582.7630023956299,
+    "wires": []
+  }
+]
